@@ -10,9 +10,9 @@ require(
     function (jQuery, calculateHst) {
         var nTotal = 0;
         jQuery("#addingmachine").submit(function () {
-            nVal = Number(jQuery("#current").val());
+            var nVal = Number(jQuery("#current").val());
             nTotal += nVal;
-            var nHst = calculateHst(nTotal);
+            var nHst = calculateHst(nTotal, jQuery("#province").val());
             jQuery("#tape").append(nVal.toFixed(2) + "<br />");
             jQuery("#current").val("");
             jQuery("#hst").html(nHst);

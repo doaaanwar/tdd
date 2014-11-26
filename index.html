@@ -1,17 +1,52 @@
 <style>
-    td, #tape{
-        text-align:right;
-        padding-right:2em;
+    td,
+    #tape {
+        text-align: right;
+        padding-left: 2em;
     }
+    #tape,
+    td:first-child{
+        width: 11em;
+    }
+    #tape,tdinput[type="text"] {
+        margin-bottom: 1em;
+    }
+
 </style>
 
 <div id="tape"></div>
 <form id="addingmachine">
     <table>
-    <tr><td><input type="" id="current" /></td></tr>
-    <tr><td id="subtotal"></td><td>subtotal</td></tr>
-    <tr><td id="hst"></td><td>hst</td></tr>
-    <tr><td id="total"></td><td><input type="submit" value="Total" /></td></tr>
+        <tr>
+            <td>
+                <input type="text" id="current" />
+            </td>
+        </tr>
+        <tr>
+            <td id="subtotal"></td>
+            <td>subtotal</td>
+        </tr>
+        <tr>
+            <td id="hst"></td>
+            <td>hst</td>
+            <td>
+                <select id="province">
+                    <option value="ON">Ontario
+                    </option>
+                    <option value="AB">Alberta
+                    </option>
+                </select>
+            </td>
+
+
+
+        </tr>
+        <tr>
+            <td id="total"></td>
+            <td>
+                <input type="submit" value="Total" />
+            </td>
+        </tr>
     </table>
 </form>
 <script data-main="js/app" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
