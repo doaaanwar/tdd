@@ -17,6 +17,6 @@ require(
             jQuery("#hst").html(nHst);
             jQuery("#subtotal").html(nTotal);
             jQuery("#total").html(nTotal + Number(nHst));
-            return false;
+            return false; // need to do this so that form doesn't reload
         });
     });
