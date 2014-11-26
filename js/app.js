@@ -15,6 +15,7 @@ require(
             jQuery("#tape").append(jQuery("#current").val() + "<br />");
             jQuery("#current").val("");
             jQuery("#hst").html(nHst);
+            jQuery("#subtotal").html(nTotal);
             jQuery("#total").html(nTotal + Number(nHst));
             return false;
         });
