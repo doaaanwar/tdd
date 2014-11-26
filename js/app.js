@@ -10,13 +10,14 @@ require(
     function (jQuery, calculateHst) {
         var nTotal = 0;
         jQuery("#addingmachine").submit(function () {
-            nTotal += Number(jQuery("#current").val());
+            nVal = Number(jQuery("#current").val());
+            nTotal += nVal;
             var nHst = calculateHst(nTotal);
-            jQuery("#tape").append(jQuery("#current").val() + "<br />");
+            jQuery("#tape").append(nVal.toFixed(2) + "<br />");
             jQuery("#current").val("");
             jQuery("#hst").html(nHst);
-            jQuery("#subtotal").html(nTotal);
-            jQuery("#total").html(nTotal + Number(nHst));
+            jQuery("#subtotal").html(nTotal.toFixed(2));
+            jQuery("#total").html((nTotal + Number(nHst)).toFixed(2));
             return false; // need to do this so that form doesn't reload
         });
     });
